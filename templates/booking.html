@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+    body {
+  background: #dd5e89;
+  background: -webkit-linear-gradient(to right, #dd5e89, #f7bb97);
+  background: linear-gradient(to right, #dd5e89, #f7bb97);
+  min-height: 100vh;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+<h1 class="text-center "> Enter Details </h1>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+<form action="http://127.0.0.1:8000/confirm" method="POST" class="form m-4">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <input type="text" name='name' required placeholder="FirstName..." class="form-control">
+    </div>
+
+    <div class="form-group">
+      <input type="text" name='no' required placeholder="AadharNumber..." class="form-control">
+    </div>
+
+    <div class="form-group">
+        <input type="number" name='child' required placeholder="Children..." class="form-control">
+    </div>
+
+    <div class="form-group">
+       <input type="number" name='adult' required placeholder="Adults..." class="form-control">
+    </div>
+
+    <div class="form-group">
+        <input type="number" name='nights' required placeholder="Nights..." class="form-control">
+    </div>
+
+    <div class="form-group">
+    <input type="date" name="checkin" required placeholder="CheckIndate" class="form-control" class="form-control">
+    </div>
+
+    <div class="form-group">
+       <input type="email" name="email" required placeholder="Email..." class="form-control">
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-success text-center">
+    </div>
+</form>
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>
+
+</body>
+</html>
