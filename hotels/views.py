@@ -54,7 +54,7 @@ def payment(request):
     
     cost=request.session['var']
     
-    return render(request,"Payment.html",{'amt':cost})
+    return render(request,"Payment.html",{'cost':cost})
 
 
    
